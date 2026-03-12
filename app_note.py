@@ -26,7 +26,7 @@ db = firestore.client()
 # ==============================
 
 # App title
-st.title("📝 Notes App (Streamlit + Firebase)")
+st.title("TimeMaster")
 
 # Input field for note title
 title = st.text_input("Title")
