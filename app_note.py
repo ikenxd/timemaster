@@ -29,10 +29,10 @@ db = firestore.client()
 st.title("TimeMaster")
 
 # Input field for note title
-title = st.text_input("Title")
+title = st.text_input("bryan nig")
 
 # Text area for note content
-notes = st.text_area("Notes")
+notes = st.text_area("meth")
 
 # Date picker for note date
 note_date = st.date_input("Date", value=date.today())
