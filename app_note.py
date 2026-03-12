@@ -37,32 +37,6 @@ notes = st.text_area("meth")
 # Date picker for note date
 note_date = st.date_input("Date", value=date.today())
 
-
-# ==============================
-# CUSTOMIZE BACKGROUND COLOR
-# ==============================
-
-
-st.markdown(
-    """
-    <style>
-    .stApp {
-        background-color: #A34E40;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
-# Your existing Streamlit code
-st.title("TimeMaster")
-st.text_input("bryan nig")
-st.text_area("meth")
-st.date_input("Date")
-st.button("Save Note")
-
-
-
 # ==============================
 # FUNCTION: SAVE NOTE TO FIRESTORE
 # ==============================
