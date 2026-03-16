@@ -59,16 +59,7 @@ x = st.date_input("Select a date",
 
 st.write(f"You selected: {x}")
 
-
-
-
-
-
-
-
-
-
-
+t = st.time_input ('Set an alarm for ', value=None)
 
 
 
@@ -113,17 +104,6 @@ if st.button("💾 Save Note"):
     else:
         # Warning if fields are empty
         st.warning("Please fill in both Title and Notes.")
-
-
-
-
-
-
-
-
-
-
-
 
 # ==============================
 # DISPLAY SAVED NOTES
