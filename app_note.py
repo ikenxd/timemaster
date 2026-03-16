@@ -52,12 +52,12 @@ title = st.text_input("Name your schedule")
 # Text area for note content
 notes = st.text_area("Desc/Notes")
 
-x = st.date_input("Select a date",
+dInput = st.date_input("Select a date",
                         value=date(2026,3,16),
                         min_value=date(2026,3,16),
                         max_value=date(2026,12,31)) 
 
-st.write(f"You selected: {x}")
+st.write(f"You selected: {dInput}")
 
 t = st.time_input ('Set an alarm for ', value=None)
 
@@ -73,7 +73,7 @@ t = st.time_input ('Set an alarm for ', value=None)
 # FUNCTION: SAVE NOTE TO FIRESTORE
 # ==============================
 
-def save_note(title, notes, note_date):
+def save_note(title, notes, dInput):
     """
     Saves a note to the Firestore 'notes' collection
     """
@@ -82,7 +82,7 @@ def save_note(title, notes, note_date):
     db.collection("notes").add({
         "title": title,                     # Store title
         "notes": notes,                     # Store notes content
-        "date": str(note_date)              # Convert date to string
+        "date": str(dInput)              # Convert date to string
     })
 
 # ==============================
@@ -96,7 +96,7 @@ if st.button("💾 Save Note"):
     if title and notes:
         
         # Call function to save data
-        save_note(title, notes, note_date)
+        save_note(title, notes, dInput)
         
         # Success message
         st.success("Note saved successfully!")
