@@ -65,12 +65,50 @@ alarm_time = st.time_input("Set an alarm for", value=None)
 
 st.write(f"You selected: {selected_date}")
 
+# ======= SIDEBAR ========
+
+
 menu = st.sidebar.radio(
     "Menu",
     ["Add Schedule", "View Notes", "About"],
     key="main_menu"
 )
 
+st.sidebar.title("Settings")
+if 'theme' not in st.session_state:
+    st.session_state.theme = "light"  # default theme
+
+def toggle_theme():
+    if st.session_state.theme == "light":
+        st.session_state.theme = "dark"
+    else:
+        st.session_state.theme = "light"
+
+st.sidebar.button("Change Theme", on_click=toggle_theme)
+
+# Apply background color based on theme
+if st.session_state.theme == "light":
+    bg_color = "#ffffff"  # white
+    text_color = "#000000"  # black
+else:
+    bg_color = "#2E2E2E"  # dark gray
+    text_color = "#ffffff"  # white
+
+st.markdown(
+    f"""
+    <style>
+    .stApp {{
+        background-color: {bg_color};
+        color: {text_color};
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# App content
+st.title("TimeMaster App")
+st.write("Your current theme is", st.session_state.theme)
 
 
 
