@@ -50,9 +50,9 @@ st.title("TimeMaster")
 # INPUT SECTION
 # =========================
 
-title = st.text_input("Name your schedule", text_color= st.session_state.theme)
+title = st.text_input("Name your schedule")
 
-notes = st.text_area("Desc / Notes", text_color= st.session_state.theme)
+notes = st.text_area("Desc / Notes")
 
 selected_date = st.date_input(
     "Select a date",
