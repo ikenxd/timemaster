@@ -22,11 +22,9 @@ if not firebase_admin._apps:
 # Create a Firestore database client
 db = firestore.client()
 
+# = = = = = = = = = = = = = = = = = = =
 
-
-# userinftrerface
-
-# Set background color
+# BG COLOR
 st.markdown(
     """
     <style>
@@ -38,18 +36,39 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# App title
+st.markdown("""
+<style>
+
+/* label color */
+label {
+    color: #3b2f2f;
+;
+    font-weight: bold;
+}
+
+/* text typed inside the input box */
+.stTextInput input {
+    color: black !important;
+}
+
+/* placeholder text color */
+.stTextInput input::placeholder {
+    color: gray !important;
+}
+
+</style>
+""", unsafe_allow_html=True)
+
+
+
+# TITLE/heading
 st.title(
     "TimeMaster",
     text_alignment="center",
 )
-       
-
-
-
 
 # Input field for note title
-title = st.text_input("Name your schedule")
+title = st.text_input("Name your schedule"),
 
 # Text area for note content
 notes = st.text_area("Desc/Notes")
@@ -64,7 +83,7 @@ st.write(f"You selected: {dInput}")
 t = st.time_input ('Set an alarm for ', value=None)
 
 
-# - - - - - - - - - - SIDEBAR
+# - - - - - - - - - - SIDEBAR - - - - - - - -
 menu = st.sidebar.radio(
     "Menu",
     ["Add Schedule", "View Notes", "About"],
