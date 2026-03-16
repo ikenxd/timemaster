@@ -46,6 +46,8 @@ st.title(
        
 
 
+
+
 # Input field for note title
 title = st.text_input("Name your schedule")
 
@@ -63,7 +65,35 @@ t = st.time_input ('Set an alarm for ', value=None)
 
 
 
+menu = st.sidebar.radio(
+    "Menu",
+    ["Add Schedule", "View Notes", "About"]
+)
 
+if menu == "Add Schedule":
+
+    st.title("TimeMaster")
+
+    title = st.text_input("Name your schedule")
+    notes = st.text_area("Desc/Notes")
+
+elif menu == "View Notes":
+
+    st.subheader("Saved Notes")
+
+    notes_docs = db.collection("notes").stream()
+
+    for note in notes_docs:
+        data = note.to_dict()
+        st.write(data.get("title"))
+        st.write(data.get("notes"))
+        st.write(data.get("date"))
+        st.divider()
+
+elif menu == "About":
+
+    st.write("TimeMaster")
+    st.write("Simple scheduling app")
 
 
 
