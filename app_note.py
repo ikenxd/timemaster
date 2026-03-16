@@ -7,7 +7,6 @@ from datetime import date
 # ==============================
 
 
-# ==============================
 
 # Check if Firebase is already initialized
 # This prevents errors because Streamlit reruns the script
@@ -44,7 +43,13 @@ h1, h2, h3, label {
 # =========================
 # TITLE
 # =========================
-st.title("TimeMaster")
+
+st.markdown(
+    """
+    <h1 style='text-align: center;'>TimeMaster</h1>
+    """,
+    unsafe_allow_html=True
+)
 
 # =========================
 # INPUT SECTION
@@ -129,7 +134,7 @@ st.markdown(
 
 # App content
 st.title("TimeMaster App")
-st.write("Your current theme is", st.session_state.theme)
+st.write("Your current theme is", st.session_state.theme, )
 
 
 
