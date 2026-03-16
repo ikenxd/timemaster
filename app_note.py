@@ -76,18 +76,18 @@ menu = st.sidebar.radio(
 
 st.sidebar.title("Settings")
 if 'theme' not in st.session_state:
-    st.session_state.theme = "light"  # default theme
+    st.session_state.theme = "purple"  # default theme
 
 def toggle_theme():
-    if st.session_state.theme == "light":
-        st.session_state.theme = "dark"
+    if st.session_state.theme == "purple":
+        st.session_state.theme = "red"
     else:
-        st.session_state.theme = "light"
+        st.session_state.theme = "purple"
 
 st.sidebar.button("Change Theme", on_click=toggle_theme)
 
 # Apply background color based on theme
-if st.session_state.theme == "light":
+if st.session_state.theme == "purple":
     bg_color = "#5D395E"
     text_color = "#D2B6D3"
 else:
