@@ -60,48 +60,6 @@ st.write(f"You selected: {dInput}")
 t = st.time_input ('Set an alarm for ', value=None)
 
 
-# - - - - - - - - - - SIDEBAR - - - - - - - -
-menu = st.sidebar.radio(
-    "Menu",
-    ["Add Schedule", "View Notes", "About"],
-    key="main_menu"
-)
-
-if menu == "Add Schedule":
-
-    st.title("TimeMaster")
-
-    title = st.text_input(
-        "Name your schedule",
-        key="schedule_title_input"
-    )
-
-    notes = st.text_area(
-        "Desc/Notes",
-        key="schedule_notes_input"
-    )
-
-elif menu == "View Notes":
-
-    st.subheader("Saved Notes")
-
-    notes_docs = db.collection("notes").stream()
-
-    for note in notes_docs:
-        data = note.to_dict()
-
-        st.write(data.get("title"))
-        st.write(data.get("notes"))
-        st.write(data.get("date"))
-
-        st.divider()
-
-elif menu == "About":
-
-    st.write("TimeMaster")
-    st.write("Simple scheduling app")
-
-
 # ==============================
 # FUNCTION: SAVE NOTE TO FIRESTORE
 # ==============================
