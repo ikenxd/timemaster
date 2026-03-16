@@ -27,16 +27,19 @@ db = firestore.client()
 # userinftrerface
 
 # App title
-st.title("TimeMaster")
+
+st.title(
+    "TimeMaster",
+    text_alignment="center",
+)
+       
+
 
 # Input field for note title
 title = st.text_input("bryan nig")
 
 # Text area for note content
 notes = st.text_area("meth")
-
-# Date picker for note date
-note_date = st.date_input("Date", value=date.today())
 
 x = st.date_input("Select a date",
                         value=date(2026,3,16),
