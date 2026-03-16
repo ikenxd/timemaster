@@ -48,12 +48,12 @@ label {
 
 /* text typed inside the input box */
 .stTextInput input {
-    color: black !important;
+    color: #3b2f2f;
 }
 
 /* placeholder text color */
 .stTextInput input::placeholder {
-    color: gray !important;
+    color: #3b2f2f;
 }
 
 </style>
