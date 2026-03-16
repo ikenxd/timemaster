@@ -55,16 +55,19 @@ import streamlit as st
 st.markdown(
     """
     <style>
-    div.stTextInput > div > input {
-        width: 150px; 
+    /* Target text input fields */
+    div[data-baseweb="input"] {
+        max-width: 300px;  /* controls the x-axis width */
+        min-width: 300px;  /* optional to make it fixed */
     }
     </style>
     """,
     unsafe_allow_html=True
 )
 
+# Text input
 title = st.text_input("Name your schedule")
-
+st.write("Your schedule is:", title)
 
 # ========================
 
