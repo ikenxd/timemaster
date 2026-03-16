@@ -92,7 +92,7 @@ if st.session_state.theme == "light":
     text_color = "#D2B6D3"
 else:
     bg_color = "#5E3939"  
-  text_color = "#D3B6B6"
+    text_color = "#D3B6B6"
 
 st.markdown(
     f"""
