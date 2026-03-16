@@ -1,11 +1,12 @@
-import streamlit as st                      # Streamlit UI framework
-import firebase_admin                       # Firebase Admin SDK
-from firebase_admin import credentials      # Handles Firebase credentials
-from firebase_admin import firestore        # Firestore database module
-from datetime import date                   # Used for date input
+import streamlit as st
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import firestore
+from datetime import date
 
 # ==============================
-# INITIALIZE FIREBASE (SAFE)
+
+
 # ==============================
 
 # Check if Firebase is already initialized
@@ -21,9 +22,9 @@ if not firebase_admin._apps:
 # Create a Firestore database client
 db = firestore.client()
 
-# ==============================
-# STREAMLIT USER INTERFACE
-# ==============================
+
+
+# userinftrerface
 
 # App title
 st.title("TimeMaster")
@@ -36,6 +37,32 @@ notes = st.text_area("meth")
 
 # Date picker for note date
 note_date = st.date_input("Date", value=date.today())
+
+x = st.date_input("Select a date",
+                        value=date(2026,3,16),
+                        min_value=date(2026,3,16),
+                        max_value=date(2026,12,31)) 
+
+st.write(f"You selected: {x}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # ==============================
 # FUNCTION: SAVE NOTE TO FIRESTORE
