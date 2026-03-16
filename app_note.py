@@ -31,7 +31,7 @@ st.markdown(
     """
     <style>
     .stApp {
-        background-color: #B07946;  /* light blue, change to any color */
+        background-color: #BF895E;  /* light blue, change to any color */
     }
     </style>
     """,
@@ -113,6 +113,17 @@ if st.button("💾 Save Note"):
     else:
         # Warning if fields are empty
         st.warning("Please fill in both Title and Notes.")
+
+
+
+
+
+
+
+
+
+
+
 
 # ==============================
 # DISPLAY SAVED NOTES
