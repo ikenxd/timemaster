@@ -49,8 +49,24 @@ st.title("TimeMaster")
 # =========================
 # INPUT SECTION
 # =========================
+import streamlit as st
+
+# CSS to shorten the text input width
+st.markdown(
+    """
+    <style>
+    div.stTextInput > div > input {
+        width: 300px; 
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 title = st.text_input("Name your schedule")
+
+
+# ========================
 
 notes = st.text_area("Desc / Notes")
 
@@ -64,6 +80,8 @@ selected_date = st.date_input(
 alarm_time = st.time_input("Set an alarm for", value=None)
 
 st.write(f"You selected: {selected_date}")
+
+
 
 # ======= SIDEBAR ========
 
