@@ -150,7 +150,7 @@ def save_note(title, notes, note_date):
 # SAVE BUTTON
 # =========================
 
-if st.button("💾 Save Note"):
+if st.button("💾 Save Schedule"):
 
     if title and notes:
         save_note(title, notes, selected_date)
