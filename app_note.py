@@ -29,35 +29,12 @@ st.markdown(
     """
     <style>
     .stApp {
-        background-color: #D1A292;  /* light blue, change to any color */
+        background-color: #3B2F2F;  /* light blue, change to any color */
     }
     </style>
     """,
     unsafe_allow_html=True
 )
-
-st.markdown("""
-<style>
-
-/* label color */
-label {
-    color: #3b2f2f;
-;
-    font-weight: bold;
-}
-
-/* text typed inside the input box */
-.stTextInput input {
-    color: #3b2f2f;
-}
-
-/* placeholder text color */
-.stTextInput input::placeholder {
-    color: #3b2f2f;
-}
-
-</style>
-""", unsafe_allow_html=True)
 
 
 
