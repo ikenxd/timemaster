@@ -164,7 +164,7 @@ if st.button("💾 Save Note"):
 # =========================
 
 st.divider()
-st.subheader("📖 Saved Notes")
+st.subheader("⏱️ Deadlines/Schedules")
 
 notes_docs = db.collection("notes").stream()
 
