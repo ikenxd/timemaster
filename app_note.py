@@ -65,6 +65,17 @@ alarm_time = st.time_input("Set an alarm for", value=None)
 
 st.write(f"You selected: {selected_date}")
 
+menu = st.sidebar.radio(
+    "Menu",
+    ["Add Schedule", "View Notes", "About"],
+    key="main_menu"
+)
+
+
+
+
+
+
 # =========================
 # SAVE FUNCTION
 # =========================
