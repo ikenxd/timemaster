@@ -134,10 +134,24 @@ st.markdown(
 
 # App content
 st.title("TimeMaster App")
-st.write("Your current theme is", st.session_state.theme, )
 
 
+# ==============
 
+
+# Example: set a theme in session_state
+if 'theme' not in st.session_state:
+    st.session_state.theme = "light"
+
+# Top-right text
+st.markdown(
+    f"""
+    <div style='position: absolute; top: 10px; right: 10px;'>
+        Your current theme is {st.session_state.theme}
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 
 # =========================
