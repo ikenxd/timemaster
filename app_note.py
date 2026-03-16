@@ -26,8 +26,19 @@ db = firestore.client()
 
 # userinftrerface
 
-# App title
+# Set background color
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: #B07946;  /* light blue, change to any color */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
+# App title
 st.title(
     "TimeMaster",
     text_alignment="center",
