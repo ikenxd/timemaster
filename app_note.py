@@ -88,11 +88,11 @@ st.sidebar.button("Change Theme", on_click=toggle_theme)
 
 # Apply background color based on theme
 if st.session_state.theme == "light":
-    bg_color = "#ffffff"  # white
-    text_color = "#000000"  # black
+    bg_color = "#5D395E"
+    text_color = "#D2B6D3"
 else:
-    bg_color = "#2E2E2E"  # dark gray
-    text_color = "#ffffff"  # white
+    bg_color = "#5E3939"  
+  text_color = "#D3B6B6"
 
 st.markdown(
     f"""
