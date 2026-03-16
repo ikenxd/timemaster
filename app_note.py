@@ -40,6 +40,37 @@ h1, h2, h3, label {
 </style>
 """, unsafe_allow_html=True)
 
+import streamlit as st
+
+# Apply custom background with gradients and opacity
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: #e5e5f7;
+        background-image: 
+            repeating-radial-gradient(circle at 0 0, transparent 0, #e5e5f7 10px),
+            repeating-linear-gradient(#444cf755, #444cf7);
+        opacity: 0.8;
+        background-size: cover;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Example content
+st.title("TimeMaster")
+st.write("Your super simple time management app")
+
+
+
+
+
+
+
+
+
 # =========================
 # TITLE
 # =========================
