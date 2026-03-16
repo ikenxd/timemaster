@@ -47,10 +47,10 @@ st.title(
 
 
 # Input field for note title
-title = st.text_input("bryan nig")
+title = st.text_input("Name your schedule")
 
 # Text area for note content
-notes = st.text_area("meth")
+notes = st.text_area("Desc/Notes")
 
 x = st.date_input("Select a date",
                         value=date(2026,3,16),
