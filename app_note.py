@@ -47,7 +47,7 @@ st.markdown(
     """
     <style>
     .stApp {
-        background-color: #e5e5f7;
+        background-color: st.session_state.theme;
         background-image: 
             repeating-radial-gradient(circle at 0 0, transparent 0, #e5e5f7 10px),
             repeating-linear-gradient(#444cf755, #444cf7);
