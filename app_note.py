@@ -56,7 +56,7 @@ st.markdown(
     """
     <style>
     div.stTextInput > div > input {
-        width: 300px; 
+        width: 150px; 
     }
     </style>
     """,
