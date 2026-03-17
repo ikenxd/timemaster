@@ -49,7 +49,7 @@ h1, h2, h3, label {
 
 st.markdown(
     """
-    <h1 style='text-align: center;'>TimeMaster</h1>
+    <h1 style='text-align: center;'>**TimeMaster**</h1>
     """,
     unsafe_allow_html=True
 )
