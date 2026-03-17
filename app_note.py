@@ -138,6 +138,39 @@ st.markdown(
 # App content
 st.title("TimeMaster App")
 
+st.sidebar.subheader("Search")
+
+search_query = st.sidebar.text_input("Search schedule")
+
+search_button = st.sidebar.button("🔍 Search")
+
+
+st.divider()
+st.subheader("⏱️ Deadlines/Schedules")
+
+notes_docs = db.collection("notes").stream()
+
+for note in notes_docs:
+    data = note.to_dict()
+
+    note_title = data.get("title", "").lower()
+    note_content = data.get("notes", "").lower()
+    note_date = data.get("date", "")
+
+    # If search is used, filter results
+    if search_button and search_query:
+        if search_query.lower() not in note_title and search_query.lower() not in note_content:
+            continue
+
+    # Display note
+    st.markdown(f"### {data.get('title', 'No Title')}")
+    st.write(data.get("notes", "No Notes"))
+    st.caption(f"📅 {note_date}")
+    st.divider()
+
+
+
+
 
 # ==============
 
